@@ -52,7 +52,6 @@ public abstract class Conta  implements IConta {
     protected void imprimirInfosComuns(){
         System.out.printf("Agência: %d%n", this.agencia);
         System.out.printf("Agência: %d%n", this.numero);
-        System.out.println("Nome: "+ cliente);
         System.out.printf("Saldo: %.2f%n", this.saldo);
 
     }
@@ -61,7 +60,7 @@ public abstract class Conta  implements IConta {
     @Override
     public void pagarBoleto(double valor) {
 
-        if ( saldo > 0 ){
+        if ( saldo < 0 ){
             saldo -= valor;
         } else{
             System.out.println("Saldo Insuficiente.");

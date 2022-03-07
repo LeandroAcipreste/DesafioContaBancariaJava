@@ -16,7 +16,7 @@ public class Main {
         cc.depositar(100);
         cc.depositar(0);
         cc.transferir(0,poupanca);
-        cc.pagarBoleto(51);
+        cc.pagarBoleto(101);
 
 
         cc.imprimirExtrato();
