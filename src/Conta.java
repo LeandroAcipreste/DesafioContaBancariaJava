@@ -52,19 +52,42 @@ public abstract class Conta  implements IConta {
     protected void imprimirInfosComuns(){
         System.out.printf("Agência: %d%n", this.agencia);
         System.out.printf("Agência: %d%n", this.numero);
-        System.out.println("Nome: "+this.cliente);
-        System.out.printf("Agência: %.2f%n", this.saldo);
+        System.out.println("Nome: "+ cliente);
+        System.out.printf("Saldo: %.2f%n", this.saldo);
+
     }
 
 
     @Override
     public void pagarBoleto(double valor) {
-        saldo -= valor;
+
+        if ( saldo > 0 ){
+            saldo -= valor;
+        } else{
+            System.out.println("Saldo Insuficiente.");
+        }
     }
 
+    /**@Override
+    public void recargaTelefone(double valor) {
+        Scanner telefone     = new Scanner(System.in);
+        Scanner valorRecarga = new Scanner(System.in);
 
+        telefone.nextInt();
+        valorRecarga.nextDouble();
 
+        if(saldo <0){
+            System.out.println("Recarga Efetuada com Sucesso");
+        }else{
+            System.out.println("Saldo Insuficiente");
+        }
+
+    }**/
 }
+
+
+
+
 
 
 

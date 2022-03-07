@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
+
+
+
+
     public static void main(String[] args) {
 
 
@@ -9,10 +13,11 @@ public class Main {
 
         IConta cc = new ContaCorrente(leandro);
         IConta poupanca = new ContaPoupanca(leandro);
-
         cc.depositar(100);
-        cc.transferir(100,poupanca);
-        cc.pagarBoleto(30);
+        cc.depositar(0);
+        cc.transferir(0,poupanca);
+        cc.pagarBoleto(51);
+
 
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();
