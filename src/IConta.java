@@ -9,7 +9,7 @@ public interface IConta {
 
      void pagarBoleto(double valor);
 
-
+     double calculaRendimento(double valor);
 
 
 }

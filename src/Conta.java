@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public abstract class Conta  implements IConta {
 
     private static int AGENCIA_PADRAO = 1;
@@ -31,6 +29,8 @@ public abstract class Conta  implements IConta {
         return saldo;
     }
 
+    public double getRendimento(){return saldo;}
+
     @Override
     public void sacar(double valor) {
         saldo -= valor;
@@ -52,6 +52,7 @@ public abstract class Conta  implements IConta {
     protected void imprimirInfosComuns(){
         System.out.printf("Agência: %d%n", this.agencia);
         System.out.printf("Agência: %d%n", this.numero);
+        System.out.println("Titular:" + this.cliente.nome);
         System.out.printf("Saldo: %.2f%n", this.saldo);
 
     }
@@ -67,21 +68,10 @@ public abstract class Conta  implements IConta {
         }
     }
 
-    /**@Override
-    public void recargaTelefone(double valor) {
-        Scanner telefone     = new Scanner(System.in);
-        Scanner valorRecarga = new Scanner(System.in);
-
-        telefone.nextInt();
-        valorRecarga.nextDouble();
-
-        if(saldo <0){
-            System.out.println("Recarga Efetuada com Sucesso");
-        }else{
-            System.out.println("Saldo Insuficiente");
-        }
-
-    }**/
+    @Override
+    public double calculaRendimento(double valor) {
+        return this.saldo * 0.1;
+    }
 }
 
 

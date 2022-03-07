@@ -9,18 +9,18 @@ public class Main {
 
 
         Cliente leandro = new Cliente();
-        leandro.setNome("Leandro");
+        leandro.setNome("Leandro Acipreste");
 
         IConta cc = new ContaCorrente(leandro);
         IConta poupanca = new ContaPoupanca(leandro);
-        cc.depositar(100);
-        cc.depositar(0);
-        cc.transferir(0,poupanca);
-        cc.pagarBoleto(101);
+        cc.depositar(500);
+        cc.transferir(200,poupanca);
+        cc.pagarBoleto(100);
 
 
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();
+
 
 
 
