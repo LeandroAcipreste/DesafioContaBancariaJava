@@ -1,7 +1,8 @@
 public class Cliente {
-    public String nome;
 
-    public String getNome() {
+    protected String nome;
+
+    private String getNome() {
         return nome;
     }
 
