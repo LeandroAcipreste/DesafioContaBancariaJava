@@ -1,13 +1,13 @@
-public abstract class Conta  implements IConta {
+public abstract class Conta implements IConta {
 
     private static int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
 
 
-    protected int agencia;
-    protected int numero;
-    protected double saldo;
-    protected Cliente cliente;
+    private int agencia;
+    private int numero;
+    private double saldo;
+    private Cliente cliente;
 
 
     public Conta(Cliente cliente) {
@@ -17,19 +17,21 @@ public abstract class Conta  implements IConta {
     }
 
 
-
-
     public int getAgencia() {
         return agencia;
     }
 
-    public int getNumero() {return numero;}
+    public int getNumero() {
+        return numero;
+    }
 
     public double getSaldo() {
         return saldo;
     }
 
-    public double getRendimento(){return saldo;}
+    public double getRendimento() {
+        return saldo;
+    }
 
     @Override
     public void sacar(double valor) {
@@ -49,7 +51,7 @@ public abstract class Conta  implements IConta {
         contadestino.depositar(valor);
     }
 
-    protected void imprimirInfosComuns(){
+    protected void imprimirInfosComuns() {
         System.out.printf("Agência: %d%n", this.agencia);
         System.out.printf("Agência: %d%n", this.numero);
         System.out.println("Titular:" + this.cliente.nome);
@@ -61,8 +63,8 @@ public abstract class Conta  implements IConta {
     @Override
     public void pagarBoleto(double valor) {
 
-        if ( saldo < valor  ){
-            System.out.println(" Saldo insuficiente para transação");
+        if (saldo < valor) {
+            System.out.println(" Saldo insuficiente para Pagar Boleto");
         } else {
             saldo -= valor;
         }

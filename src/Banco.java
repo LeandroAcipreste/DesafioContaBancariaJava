@@ -13,7 +13,7 @@ public class Banco {
         return nome;
     }
 
-    public List<Conta> getContas(){
+    public List<Conta> getContas() {
         return contas;
     }
 
