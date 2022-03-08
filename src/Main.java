@@ -15,7 +15,7 @@ public class Main {
         IConta poupanca = new ContaPoupanca(leandro);
         cc.depositar(500);
         cc.transferir(200,poupanca);
-        cc.pagarBoleto(100);
+        cc.pagarBoleto(500);
 
 
         cc.imprimirExtrato();

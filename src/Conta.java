@@ -61,10 +61,10 @@ public abstract class Conta  implements IConta {
     @Override
     public void pagarBoleto(double valor) {
 
-        if ( saldo > 0 ){
+        if ( saldo < valor  ){
+            System.out.println(" Saldo insuficiente para transação");
+        } else {
             saldo -= valor;
-        } else{
-            System.out.println("Saldo Insuficiente.");
         }
     }
 
