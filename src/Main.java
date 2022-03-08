@@ -3,7 +3,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         Cliente leandro = new Cliente();
         leandro.setNome("Leandro Acipreste");
 
@@ -13,10 +12,8 @@ public class Main {
         cc.transferir(200, poupanca);
         cc.pagarBoleto(500);
 
-
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();
-
 
     }
 

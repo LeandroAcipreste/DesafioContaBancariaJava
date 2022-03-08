@@ -16,7 +16,6 @@ public abstract class Conta implements IConta {
         this.cliente = cliente;
     }
 
-
     public int getAgencia() {
         return agencia;
     }
@@ -42,7 +41,6 @@ public abstract class Conta implements IConta {
     @Override
     public void depositar(double valor) {
         saldo += valor;
-
     }
 
     @Override
@@ -56,9 +54,7 @@ public abstract class Conta implements IConta {
         System.out.printf("Agência: %d%n", this.numero);
         System.out.println("Titular:" + this.cliente.nome);
         System.out.printf("Saldo: %.2f%n", this.saldo);
-
     }
-
 
     @Override
     public void pagarBoleto(double valor) {
